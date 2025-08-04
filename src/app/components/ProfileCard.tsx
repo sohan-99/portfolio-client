@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
+import { useLanguage } from "./LanguageContext";
 import Image from "next/image";
 
 export default function ProfileCard() {
+  const { lang } = useLanguage();
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0ibTM2IDE0IDggOC04IDhWMTR6TTE0IDM2bDgtOCA4IDhIMTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+      <div className="absolute inset-0  opacity-20"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-emerald-500/10 rounded-full blur-xl"></div>
@@ -43,16 +45,28 @@ export default function ProfileCard() {
           {/* Info Section with Enhanced Typography */}
           <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left z-10">
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight drop-shadow-lg">
-              কে. এম. মাহবুবার রহমান হারেজ
+              {lang === "EN"
+                ? "KM Mahbubar Rahman Harej"
+                : "কে. এম. মাহবুবার রহমান হারেজ"}
             </h1>
             <div className="text-xl md:text-3xl text-gray-200 font-bold mb-3 bg-white/10 px-6 py-2 rounded-xl backdrop-blur-sm border border-white/20">
-              সদস্য, জাতীয় নির্বাহী কমিটি{" "}
-              <span className="text-emerald-300 font-black">(বিএনপি)</span>
+              {lang === "EN"
+                ? "Member, National Executive Committee "
+                : "সদস্য, জাতীয় নির্বাহী কমিটি "}
+              <span className="text-emerald-300 font-black">
+                {lang === "EN" ? "(BNP)" : "(বিএনপি)"}
+              </span>
             </div>
             <div className="text-lg md:text-2xl font-bold text-emerald-200 mt-2 bg-emerald-900/30 px-6 py-3 rounded-xl backdrop-blur-sm border border-emerald-400/30">
-              দলীয় মনোনয়ন প্রত্যাশী,{" "}
-              <span className="text-emerald-300">বগুড়া-৫</span>{" "}
-              <span className="text-red-300">(শেরপুর-ধুনট)</span>
+              {lang === "EN"
+                ? "Party Nomination Aspirant, "
+                : "দলীয় মনোনয়ন প্রত্যাশী, "}
+              <span className="text-emerald-300">
+                {lang === "EN" ? "Bogra-5" : "বগুড়া-৫"}
+              </span>{" "}
+              <span className="text-red-300">
+                {lang === "EN" ? "(Sherpur-Dhunat)" : "(শেরপুর-ধুনট)"}
+              </span>
             </div>
 
             {/* Additional Visual Elements */}

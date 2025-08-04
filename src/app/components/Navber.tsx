@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useLanguage } from "./LanguageContext";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const menuItemsEN = [
@@ -33,7 +34,7 @@ const socialIcons = [
 
 export default function BnpNavbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
-  const [lang, setLang] = useState<"EN" | "BN">("EN");
+  const { lang, setLang } = useLanguage();
 
   return (
     <header className="bg-[#F5F5F5] shadow-sm">
