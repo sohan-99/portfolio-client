@@ -25,7 +25,7 @@ const menuItemsBN = [
 ];
 
 const socialIcons = [
-  { name: "Facebook", icon: "/icons8-facebook.svg", link: "#" },
+  { name: "Facebook", icon: "/icons8-facebook.svg", link: "https://www.facebook.com/mahbuburrahman.harej" },
   { name: "YouTube", icon: "/youtube-svgrepo-com.svg", link: "#" },
   { name: "Instagram", icon: "/instagram-svgrepo-com.svg", link: "#" },
   { name: "X", icon: "/icons8-x.svg", link: "#" },
@@ -52,7 +52,7 @@ export default function BnpNavbar() {
             <div className="font-semibold text-gray-800">
               {lang === "EN"
                 ? "KM Mahbubar Rahman Harej"
-                : "কে.এম.মাহবুবার রহমান হারেজ"}
+                : "কেএম মাহবুবার রহমান হারেজ"}
             </div>
           </div>
         </div>

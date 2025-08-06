@@ -47,7 +47,7 @@ export default function ProfileCard() {
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight drop-shadow-lg">
               {lang === "EN"
                 ? "KM Mahbubar Rahman Harej"
-                : "কে. এম. মাহবুবার রহমান হারেজ"}
+                : "কেএম মাহবুবার রহমান হারেজ"}
             </h1>
             <div className="text-xl md:text-3xl text-gray-200 font-bold mb-3 bg-white/10 px-6 py-2 rounded-xl backdrop-blur-sm border border-white/20">
               {lang === "EN"
