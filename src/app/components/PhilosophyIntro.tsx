@@ -5,10 +5,7 @@ import { useLanguage } from "./LanguageContext";
 export default function PhilosophyIntro() {
   const { lang } = useLanguage();
   return (
-    <section className="relative py-16 px-2 md:px-0 min-h-[380px] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0  opacity-20"></div>
-
+    <section className="relative py-16 px-2 md:px-0 min-h-[380px] overflow-hidden">
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-emerald-500/10 rounded-full blur-xl"></div>
       <div className="absolute top-40 right-20 w-32 h-32 bg-red-500/10 rounded-full blur-2xl"></div>
@@ -35,7 +32,7 @@ export default function PhilosophyIntro() {
             <blockquote className="font-semibold text-gray-200 mb-4 text-base md:text-lg">
               {lang === "EN"
                 ? '"Restoring democracy and improving the fate of the people of Sherpur-Dhunat is my only goal."'
-                : "“গণতন্ত্র পুনরুদ্ধার এবং শেরপুর-ধুনটের মানুষের ভাগ্য উন্নয়নই আমার একমাত্র লক্ষ্য।”"}
+                : "গণতন্ত্র পুনরুদ্ধার এবং শেরপুর-ধুনটের মানুষের ভাগ্য উন্নয়নই আমার একমাত্র লক্ষ্য।"}
             </blockquote>
             <ul className="list-none space-y-3 text-gray-300 text-base md:text-lg font-medium">
               <li className="flex items-start gap-2">

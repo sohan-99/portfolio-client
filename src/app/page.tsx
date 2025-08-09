@@ -1,7 +1,5 @@
 "use client";
 import Navbar from "./components/Navber";
-import PhilosophyIntro from "./components/PhilosophyIntro";
-import ProfileCard from "./components/ProfileCard";
 import { LanguageProvider } from "./components/LanguageContext";
 import { FloatButton } from "antd";
 import { VerticalAlignTopOutlined } from "@ant-design/icons";
@@ -12,8 +10,6 @@ export default function Home() {
         {/* Content Container */}
         <div className="relative z-10">
           <Navbar />
-          <ProfileCard />
-          <PhilosophyIntro />
         </div>
         <FloatButton
           icon={<VerticalAlignTopOutlined />}

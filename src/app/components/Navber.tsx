@@ -5,9 +5,9 @@ import { useLanguage } from "./LanguageContext";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const menuItemsEN = [
-  { title: "Philosophy" },
-  { title: "About Us" },
-  { title: "Policies", submenu: ["National", "International", "Economic"] },
+  { title: "History" },
+  { title: "About me" },
+  { title: "The plan", submenu: ["Planning for Sherpur", "Planning for Dhunut", "Planning for Bangladesh"] },
   { title: "Party", submenu: ["Chairperson", "Leadership", "Wings"] },
   { title: "Resources", submenu: ["Documents", "Media", "Reports"] },
   { title: "Achievements", submenu: ["Political", "Social", "Economic"] },
@@ -15,9 +15,9 @@ const menuItemsEN = [
 ];
 
 const menuItemsBN = [
-  { title: "দর্শন" },
-  { title: "আমাদের সম্পর্কে" },
-  { title: "নীতিমালা", submenu: ["জাতীয়", "আন্তর্জাতিক", "অর্থনৈতিক"] },
+  { title: "ইতিহাস" },
+  { title: "আমার সম্পর্কে",submenu: ["শেরপুরের পরিকল্পনা", "ধুনট নিয়ে পরিকল্পনা", "বাংলাদেশের জন্য পরিকল্পনা"] },
+  { title: "পরিকল্পনা", submenu: ["শেরপুরের পরিকল্পনা", "ধুনট নিয়ে পরিকল্পনা", "বাংলাদেশের জন্য পরিকল্পনা"] },
   { title: "দল", submenu: ["চেয়ারপার্সন", "নেতৃত্ব", "উইংস"] },
   { title: "রিসোর্সেস", submenu: ["ডকুমেন্টস", "মিডিয়া", "রিপোর্টস"] },
   { title: "অর্জনসমূহ", submenu: ["রাজনৈতিক", "সামাজিক", "অর্থনৈতিক"] },
