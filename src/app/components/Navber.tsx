@@ -6,22 +6,20 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const menuItemsEN = [
   { title: "History" },
-  { title: "About me" },
+  { title: "About me", submenu: ["Philosophy", "Achievements and Sacrifice","Harez in the wake of the incident","Political activities"] },
   { title: "The plan", submenu: ["Planning for Sherpur", "Planning for Dhunut", "Planning for Bangladesh"] },
-  { title: "Party", submenu: ["Chairperson", "Leadership", "Wings"] },
-  { title: "Resources", submenu: ["Documents", "Media", "Reports"] },
-  { title: "Achievements", submenu: ["Political", "Social", "Economic"] },
-  { title: "Latest", submenu: ["News", "Events", "Press"] },
+  { title: "News and media" },
+  { title: "Contact"},
+  { title: "Send message"},
 ];
 
 const menuItemsBN = [
   { title: "ইতিহাস" },
-  { title: "আমার সম্পর্কে",submenu: ["শেরপুরের পরিকল্পনা", "ধুনট নিয়ে পরিকল্পনা", "বাংলাদেশের জন্য পরিকল্পনা"] },
+  { title: "আমার সম্পর্কে",submenu: ["দর্শন ", "অর্জন ও ত্যাগ","ঘটনার প্রেক্ষিতে হারেজ","রাজনৈতিক কার্যক্রম "] },
   { title: "পরিকল্পনা", submenu: ["শেরপুরের পরিকল্পনা", "ধুনট নিয়ে পরিকল্পনা", "বাংলাদেশের জন্য পরিকল্পনা"] },
-  { title: "দল", submenu: ["চেয়ারপার্সন", "নেতৃত্ব", "উইংস"] },
-  { title: "রিসোর্সেস", submenu: ["ডকুমেন্টস", "মিডিয়া", "রিপোর্টস"] },
-  { title: "অর্জনসমূহ", submenu: ["রাজনৈতিক", "সামাজিক", "অর্থনৈতিক"] },
-  { title: "সাম্প্রতিক", submenu: ["সংবাদ", "ইভেন্টস", "প্রেস"] },
+  { title: "সংবাদ ও মিডিয়া" },
+  { title: "যোগাযোগ" },
+  { title: "বার্তা পাঠান "},
 ];
 
 const socialIcons = [
