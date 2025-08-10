@@ -4,6 +4,7 @@ import { LanguageProvider } from "./components/LanguageContext";
 import { FloatButton } from "antd";
 import { VerticalAlignTopOutlined } from "@ant-design/icons";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         {/* Content Container */}
         <div className="relative z-10">
           <Navbar />
+          <Header />
           <Footer />
         </div>
         <FloatButton
