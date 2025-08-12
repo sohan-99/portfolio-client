@@ -56,12 +56,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#00664E] text-white">
-      <div className="pt-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="pt-8 pb-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* About Section */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-4">
+            <div className="lg:col-span-1 text-center sm:text-left">
+              <div className="flex items-center justify-center sm:justify-start space-x-3 mb-4">
                 <Image
                   src="/harij.jpg"
                   alt="KM Mahbubar Rahman Harej"
@@ -69,42 +69,42 @@ export default function Footer() {
                   height={50}
                   className="object-cover rounded-full border-2 border-green-500"
                 />
-                <div>
-                  <h3 className="font-bold text-lg text-white">
+                <div className="text-left">
+                  <h3 className="font-bold text-base lg:text-lg text-white">
                     {lang === "EN"
                       ? "KM Mahbubar Rahman Harej"
                       : "কেএম মাহবুবার রহমান হারেজ"}
                   </h3>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-xs sm:text-sm text-gray-300">
                     {lang === "EN"
                       ? "Political Leader & Public Servant"
                       : "রাজনৈতিক নেতা ও জনসেবক"}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
                 {lang === "EN"
                   ? "Dedicated to serving the people of Sherpur-Dhunut constituency and working towards a better Bangladesh for all."
                   : "শেরপুর-ধুনট নির্বাচনী এলাকার জনগণের সেবায় নিবেদিত এবং সবার জন্য একটি উন্নত বাংলাদেশ গড়তে কাজ করছি।"}
               </p>
 
               {/* Social Media */}
-              <div className="flex space-x-3">
+              <div className="flex justify-center sm:justify-start space-x-2 sm:space-x-3">
                 {socialIcons.map((social) => (
                   <a
                     key={social.name}
                     href={social.link}
                     title={social.name}
-                    className="hover:scale-110 transition-transform  rounded-full p-2"
+                    className="hover:scale-110 transition-transform rounded-full p-1.5 sm:p-2 hover:bg-green-700"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       src={social.icon}
                       alt={social.name}
-                      width={20}
-                      height={20}
-                      className="object-contain filter invert"
+                      width={18}
+                      height={18}
+                      className="sm:w-5 sm:h-5 object-contain filter invert"
                     />
                   </a>
                 ))}
@@ -112,16 +112,16 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4 text-white">
+            <div className="text-center sm:text-left">
+              <h3 className="font-semibold text-base lg:text-lg mb-3 lg:mb-4 text-white">
                 {lang === "EN" ? "Quick Links" : "দ্রুত লিংক"}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.title}>
                     <button
                       onClick={() => handleNavigation(link.href)}
-                      className="text-white hover:text-gray-300 transition-colors duration-200 text-sm"
+                      className="text-white hover:text-gray-300 transition-colors duration-200 text-xs sm:text-sm hover:underline"
                     >
                       {link.title}
                     </button>
@@ -131,16 +131,16 @@ export default function Footer() {
             </div>
 
             {/* Services & Plans */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4 text-white">
+            <div className="text-center sm:text-left">
+              <h3 className="font-semibold text-base lg:text-lg mb-3 lg:mb-4 text-white">
                 {lang === "EN" ? "Vision & Plans" : "দৃষ্টিভঙ্গি ও পরিকল্পনা"}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {services.map((service) => (
                   <li key={service.title}>
                     <button
                       onClick={() => handleNavigation(service.href)}
-                      className="text-white hover:text-gray-300 transition-colors duration-200 text-sm"
+                      className="text-white hover:text-gray-300 transition-colors duration-200 text-xs sm:text-sm hover:underline"
                     >
                       {service.title}
                     </button>
@@ -150,39 +150,41 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4 text-white">
+            <div className="text-center sm:text-left">
+              <h3 className="font-semibold text-base lg:text-lg mb-3 lg:mb-4 text-white">
                 {lang === "EN" ? "Get in Touch" : "যোগাযোগ"}
               </h3>
-              <div className="space-y-3">
-                <div className="text-sm">
-                  <p className="text-white mb-1">
+              <div className="space-y-2 sm:space-y-3">
+                <div className="text-xs sm:text-sm">
+                  <p className="text-white mb-1 font-medium">
                     {lang === "EN" ? "Constituency:" : "নির্বাচনী এলাকা:"}
                   </p>
-                  <p className="text-white">
+                  <p className="text-gray-300">
                     {lang === "EN"
                       ? "Sherpur-Dhunat, Bogura"
                       : "শেরপুর-ধুনট, বগুড়া"}
                   </p>
                 </div>
 
-                <div className="text-sm">
-                  <p className="text-white mb-1">
+                <div className="text-xs sm:text-sm">
+                  <p className="text-white mb-1 font-medium">
                     {lang === "EN" ? "Email:" : "ইমেইল:"}
                   </p>
-                  <p className="text-white">harej.official@example.com</p>
+                  <p className="text-gray-300 break-all">
+                    harej.official@example.com
+                  </p>
                 </div>
 
-                <div className="flex space-x-2 mt-4">
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mt-3 sm:mt-4">
                   <button
                     onClick={() => handleNavigation("/contact")}
-                    className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition-colors duration-200"
+                    className="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-md text-xs sm:text-sm transition-colors duration-200 flex-1"
                   >
                     {lang === "EN" ? "Contact" : "যোগাযোগ"}
                   </button>
                   <button
                     onClick={() => handleNavigation("/send-message")}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition-colors duration-200"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-xs sm:text-sm transition-colors duration-200 flex-1"
                   >
                     {lang === "EN" ? "Send Message" : "বার্তা পাঠান"}
                   </button>
@@ -194,15 +196,15 @@ export default function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="bg-[#00664E]">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <p className="text-sm text-white text-center md:text-left">
+      <div className="bg-[#00664E] border-t border-green-600">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 text-center md:text-left">
+            <p className="text-xs sm:text-sm text-white">
               {lang === "EN"
                 ? "© 2025 KM Mahbubar Rahman Harej. All rights reserved."
                 : "© 2025 KM মাহবুবুর রহমান হরেজ। সকল অধিকার সংরক্ষিত।"}
             </p>
-            <p className="text-xs text-white text-center md:text-right">
+            <p className="text-xs text-gray-300">
               {lang === "EN"
                 ? "Serving the people of Bangladesh with dedication and integrity"
                 : "নিষ্ঠা ও সততার সাথে বাংলাদেশের জনগণের সেবা করছি"}

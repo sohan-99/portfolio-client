@@ -5,21 +5,21 @@ export default function HistoryPage() {
   const { lang } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 text-gray-800">
           {lang === "EN" ? "History" : "ইতিহাস"}
         </h1>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
           <div className="prose max-w-none">
             {lang === "EN" ? (
               <>
-                <div className="mb-8">
-                  <h2 className="text-2xl font-semibold text-blue-700 mb-4">
+                <div className="mb-6 sm:mb-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-3 sm:mb-4">
                     A Legacy of Service
                   </h2>
-                  <p className="text-lg text-gray-700 mb-6">
+                  <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                     The history of KM Mahbubar Rahman Harej is deeply
                     intertwined with the political and social development of
                     Bangladesh. From humble beginnings to becoming a respected
@@ -28,12 +28,12 @@ export default function HistoryPage() {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-green-700 mb-3">
+                    <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-2 sm:mb-3">
                       Early Life & Background
                     </h3>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                    <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-2">
                       <li>Born and raised in Sherpur, Bogura</li>
                       <li>Grew up in a politically aware family</li>
                       <li>
@@ -46,10 +46,10 @@ export default function HistoryPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-green-700 mb-3">
+                    <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-2 sm:mb-3">
                       Political Awakening
                     </h3>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                    <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-2">
                       <li>Involvement in student politics</li>
                       <li>Active participation in democratic movements</li>
                       <li>Leadership roles in local organizations</li>
@@ -58,37 +58,37 @@ export default function HistoryPage() {
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <h2 className="text-2xl font-semibold text-red-700 mb-4">
+                <div className="mt-6 sm:mt-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-red-700 mb-3 sm:mb-4">
                     Historical Milestones
                   </h2>
-                  <div className="space-y-6">
-                    <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                      <h4 className="font-semibold text-green-800 mb-2">
+                  <div className="space-y-4 sm:space-y-6">
+                    <div className="bg-green-50 p-3 sm:p-4 rounded-lg border-l-4 border-green-500">
+                      <h4 className="font-semibold text-green-800 mb-1 sm:mb-2 text-sm sm:text-base">
                         First Electoral Victory
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-sm sm:text-base text-gray-700">
                         Won the first election with overwhelming public support,
                         marking the beginning of a distinguished political
                         career.
                       </p>
                     </div>
 
-                    <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                      <h4 className="font-semibold text-blue-800 mb-2">
+                    <div className="bg-blue-50 p-3 sm:p-4 rounded-lg border-l-4 border-blue-500">
+                      <h4 className="font-semibold text-blue-800 mb-1 sm:mb-2 text-sm sm:text-base">
                         Development Initiatives
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-sm sm:text-base text-gray-700">
                         Launched multiple development projects that transformed
                         the socio-economic landscape of the constituency.
                       </p>
                     </div>
 
-                    <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
-                      <h4 className="font-semibold text-orange-800 mb-2">
+                    <div className="bg-orange-50 p-3 sm:p-4 rounded-lg border-l-4 border-orange-500">
+                      <h4 className="font-semibold text-orange-800 mb-1 sm:mb-2 text-sm sm:text-base">
                         Democratic Movements
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-sm sm:text-base text-gray-700">
                         Played crucial roles in various democratic movements and
                         constitutional reforms.
                       </p>
@@ -96,11 +96,11 @@ export default function HistoryPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 bg-gray-100 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <div className="mt-6 sm:mt-8 bg-gray-100 p-4 sm:p-6 rounded-lg">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 sm:mb-3">
                     Legacy and Impact
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     The historical journey of KM Mahbubar Rahman Harej continues
                     to inspire future generations. His commitment to democratic
                     values, social justice, and people-centered development has

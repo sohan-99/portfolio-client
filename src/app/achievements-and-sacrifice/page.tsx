@@ -6,22 +6,22 @@ export default function AchievementsAndSacrificePage() {
   const { lang } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 text-gray-800">
           {lang === "EN" ? "Achievements and Sacrifice" : "অর্জন ও ত্যাগ"}
         </h1>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
           <div className="prose max-w-none">
             {lang === "EN" ? (
               <>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h2 className="text-2xl font-semibold text-green-700 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-green-700 mb-3 sm:mb-4">
                       Achievements
                     </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-3">
+                    <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-2 sm:space-y-3">
                       <li>
                         Successfully represented the constituency for multiple
                         terms
@@ -41,10 +41,10 @@ export default function AchievementsAndSacrificePage() {
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-semibold text-red-700 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-red-700 mb-3 sm:mb-4">
                       Sacrifices
                     </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-3">
+                    <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-2 sm:space-y-3">
                       <li>Personal time dedicated to public service</li>
                       <li>Financial contributions for community development</li>
                       <li>Political persecution during democratic movements</li>
@@ -55,11 +55,11 @@ export default function AchievementsAndSacrificePage() {
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                <div className="mt-6 sm:mt-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
                     Legacy of Service
                   </h2>
-                  <p className="text-gray-700">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     Throughout my political career, I have always prioritized
                     the welfare of the people over personal gain. Every
                     achievement has come through dedication and sacrifice, and
@@ -70,12 +70,12 @@ export default function AchievementsAndSacrificePage() {
               </>
             ) : (
               <>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h2 className="text-2xl font-semibold text-green-700 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-green-700 mb-3 sm:mb-4">
                       অর্জনসমূহ
                     </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-3">
+                    <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-2 sm:space-y-3">
                       <li>একাধিকবার নির্বাচনী এলাকার সফল প্রতিনিধিত্ব</li>
                       <li>গ্রামীণ অবকাঠামো উন্নয়ন প্রকল্পের সূচনা</li>
                       <li>দূরবর্তী এলাকায় শিক্ষা প্রতিষ্ঠান স্থাপন</li>
@@ -88,10 +88,10 @@ export default function AchievementsAndSacrificePage() {
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-semibold text-red-700 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-red-700 mb-3 sm:mb-4">
                       ত্যাগসমূহ
                     </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-3">
+                    <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-2 sm:space-y-3">
                       <li>জনসেবায় ব্যক্তিগত সময়ের উৎসর্গ</li>
                       <li>সমাজ উন্নয়নে আর্থিক অবদান</li>
                       <li>গণতান্ত্রিক আন্দোলনের সময় রাজনৈতিক নিপীড়ন</li>
@@ -102,11 +102,11 @@ export default function AchievementsAndSacrificePage() {
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                <div className="mt-6 sm:mt-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
                     সেবার উত্তরাধিকার
                   </h2>
-                  <p className="text-gray-700">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     আমার রাজনৈতিক জীবনব্যাপী, আমি সর্বদা ব্যক্তিগত স্বার্থের
                     চেয়ে জনগণের কল্যাণকে অগ্রাধিকার দিয়েছি। প্রতিটি অর্জন
                     এসেছে নিষ্ঠা ও ত্যাগের মাধ্যমে, এবং প্রতিটি ত্যাগ করা হয়েছে

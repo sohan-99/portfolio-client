@@ -5,34 +5,34 @@ export default function ContactPage() {
   const { lang } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 text-gray-800">
           {lang === "EN" ? "Contact" : "যোগাযোগ"}
         </h1>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
           <div className="prose max-w-none">
             {lang === "EN" ? (
               <>
-                <div className="mb-8 text-center">
-                  <h2 className="text-2xl font-semibold text-blue-700 mb-4">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-3 sm:mb-4">
                     Get in Touch
                   </h2>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                     I am always available to hear from the people and address
                     their concerns. Please feel free to reach out through any of
                     the following channels.
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-green-700 mb-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-3 sm:mb-4">
                       Office Address
                     </h3>
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <p className="text-gray-700 mb-2">
+                    <div className="bg-green-50 p-3 sm:p-4 rounded-lg">
+                      <p className="text-sm sm:text-base text-gray-700 mb-2">
                         <strong>Constituency Office:</strong>
                         <br />
                         Sherpur-Dhunat
@@ -43,11 +43,11 @@ export default function ContactPage() {
                       </p>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-green-700 mb-4 mt-6">
+                    <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-3 sm:mb-4 mt-4 sm:mt-6">
                       Office Hours
                     </h3>
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <p className="text-gray-700">
+                    <div className="bg-blue-50 p-3 sm:p-4 rounded-lg">
+                      <p className="text-sm sm:text-base text-gray-700">
                         <strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM
                         <br />
                         <strong>Saturday:</strong> 9:00 AM - 2:00 PM
@@ -58,37 +58,37 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-green-700 mb-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-3 sm:mb-4">
                       Contact Information
                     </h3>
-                    <div className="space-y-4">
-                      <div className="bg-orange-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-orange-800 mb-2">
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="bg-orange-50 p-3 sm:p-4 rounded-lg">
+                        <h4 className="font-semibold text-orange-800 mb-1 sm:mb-2 text-sm sm:text-base">
                           Phone
                         </h4>
-                        <p className="text-gray-700">
+                        <p className="text-sm sm:text-base text-gray-700">
                           Office: +880-XXX-XXXXXXX
                           <br />
                           Mobile: +880-XXX-XXXXXXX
                         </p>
                       </div>
 
-                      <div className="bg-purple-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-purple-800 mb-2">
+                      <div className="bg-purple-50 p-3 sm:p-4 rounded-lg">
+                        <h4 className="font-semibold text-purple-800 mb-1 sm:mb-2 text-sm sm:text-base">
                           Email
                         </h4>
-                        <p className="text-gray-700">
+                        <p className="text-sm sm:text-base text-gray-700 break-all">
                           Official: harej.official@example.com
                           <br />
                           Personal: km.harej@example.com
                         </p>
                       </div>
 
-                      <div className="bg-red-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-red-800 mb-2">
+                      <div className="bg-red-50 p-3 sm:p-4 rounded-lg">
+                        <h4 className="font-semibold text-red-800 mb-1 sm:mb-2 text-sm sm:text-base">
                           Social Media
                         </h4>
-                        <p className="text-gray-700">
+                        <p className="text-sm sm:text-base text-gray-700">
                           Facebook: @mahbuburrahman.harej
                           <br />
                           Twitter: @kmharej
@@ -100,16 +100,16 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 bg-gray-100 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                <div className="mt-6 sm:mt-8 bg-gray-100 p-4 sm:p-6 rounded-lg">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">
                     Public Meetings
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
                     I hold regular public meetings in different areas of the
                     constituency to meet with citizens and discuss their issues
                     directly.
                   </p>
-                  <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                  <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-2">
                     <li>
                       First Saturday of every month - Sherpur Community Center
                     </li>
@@ -123,11 +123,11 @@ export default function ContactPage() {
                   </ul>
                 </div>
 
-                <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
-                  <h3 className="text-xl font-semibold text-yellow-800 mb-3">
+                <div className="mt-6 sm:mt-8 bg-yellow-50 p-4 sm:p-6 rounded-lg border-l-4 border-yellow-500">
+                  <h3 className="text-lg sm:text-xl font-semibold text-yellow-800 mb-2 sm:mb-3">
                     Emergency Contact
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     For urgent matters requiring immediate attention, please
                     call the emergency hotline:
                     <strong> +880-XXX-EMERGENCY</strong> (Available 24/7)

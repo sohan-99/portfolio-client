@@ -110,30 +110,30 @@ Sent from Portfolio Contact Form
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 text-gray-800">
           {lang === "EN" ? "Send Message" : "বার্তা পাঠান"}
         </h1>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="mb-8 text-center">
-            <h2 className="text-2xl font-semibold text-blue-700 mb-4">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+          <div className="mb-6 sm:mb-8 text-center">
+            <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-3 sm:mb-4">
               {lang === "EN" ? "Share Your Thoughts" : "আপনার মতামত জানান"}
             </h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               {lang === "EN"
                 ? "Your voice matters to me. Please share your concerns, suggestions, or any message you'd like to convey."
                 : "আপনার কণ্ঠস্বর আমার কাছে গুরুত্বপূর্ণ। অনুগ্রহ করে আপনার উদ্বেগ, পরামর্শ বা যেকোনো বার্তা জানান।"}
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                 >
                   {lang === "EN" ? "Full Name *" : "পূর্ণ নাম *"}
                 </label>
@@ -144,7 +144,7 @@ Sent from Portfolio Contact Form
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black text-sm sm:text-base"
                   placeholder={
                     lang === "EN"
                       ? "Enter your full name"
@@ -156,7 +156,7 @@ Sent from Portfolio Contact Form
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                 >
                   {lang === "EN" ? "Email Address" : "ইমেইল ঠিকানা"}
                 </label>
@@ -166,7 +166,7 @@ Sent from Portfolio Contact Form
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black text-sm sm:text-base"
                   placeholder={
                     lang === "EN" ? "Enter your email" : "আপনার ইমেইল লিখুন"
                   }
@@ -174,11 +174,11 @@ Sent from Portfolio Contact Form
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                 >
                   {lang === "EN" ? "Phone Number" : "ফোন নম্বর"}
                 </label>
@@ -188,7 +188,7 @@ Sent from Portfolio Contact Form
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black text-sm sm:text-base"
                   placeholder={
                     lang === "EN"
                       ? "Enter your phone number"
@@ -200,7 +200,7 @@ Sent from Portfolio Contact Form
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                 >
                   {lang === "EN" ? "Subject *" : "বিষয় *"}
                 </label>
@@ -210,7 +210,7 @@ Sent from Portfolio Contact Form
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-black text-sm sm:text-base"
                 >
                   <option value="">
                     {lang === "EN"
@@ -242,7 +242,7 @@ Sent from Portfolio Contact Form
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
               >
                 {lang === "EN" ? "Your Message *" : "আপনার বার্তা *"}
               </label>
@@ -250,10 +250,10 @@ Sent from Portfolio Contact Form
                 id="message"
                 name="message"
                 required
-                rows={6}
+                rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-vertical text-black"
+                className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-vertical text-black text-sm sm:text-base"
                 placeholder={
                   lang === "EN"
                     ? "Please describe your message in detail. Your feedback is valuable to me."
@@ -262,11 +262,11 @@ Sent from Portfolio Contact Form
               ></textarea>
             </div>
 
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+            <div className="bg-blue-50 p-3 sm:p-4 rounded-lg">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">
                 {lang === "EN" ? "Privacy Notice" : "গোপনীয়তার নোটিশ"}
               </h3>
-              <p className="text-sm text-blue-700">
+              <p className="text-xs sm:text-sm text-blue-700 leading-relaxed">
                 {lang === "EN"
                   ? "Your personal information will be kept confidential and used only to respond to your message. We do not share your information with third parties."
                   : "আপনার ব্যক্তিগত তথ্য গোপনীয় রাখা হবে এবং শুধুমাত্র আপনার বার্তার উত্তর দিতে ব্যবহৃত হবে। আমরা তৃতীয় পক্ষের সাথে আপনার তথ্য ভাগ করি না।"}
@@ -277,7 +277,7 @@ Sent from Portfolio Contact Form
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`font-bold py-4 px-8 rounded-lg transition-all duration-300 transform shadow-lg ${
+                className={`w-full sm:w-auto font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 transform shadow-lg text-sm sm:text-base ${
                   isSubmitting
                     ? "bg-gray-400 cursor-not-allowed"
                     : "bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700 hover:scale-105"
@@ -296,22 +296,24 @@ Sent from Portfolio Contact Form
             {/* Status Message */}
             {submitStatus.type && (
               <div
-                className={`mt-6 p-4 rounded-lg text-center ${
+                className={`mt-4 sm:mt-6 p-3 sm:p-4 rounded-lg text-center ${
                   submitStatus.type === "success"
                     ? "bg-green-100 text-green-800 border border-green-300"
                     : "bg-red-100 text-red-800 border border-red-300"
                 }`}
               >
-                <p className="font-medium">{submitStatus.message}</p>
+                <p className="font-medium text-sm sm:text-base">
+                  {submitStatus.message}
+                </p>
               </div>
             )}
           </form>
 
-          <div className="mt-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-            <h3 className="text-lg font-semibold text-green-800 mb-2">
+          <div className="mt-6 sm:mt-8 bg-green-50 p-4 sm:p-6 rounded-lg border-l-4 border-green-500">
+            <h3 className="text-base sm:text-lg font-semibold text-green-800 mb-2">
               {lang === "EN" ? "Response Time" : "উত্তরের সময়"}
             </h3>
-            <p className="text-green-700">
+            <p className="text-green-700 text-xs sm:text-sm leading-relaxed">
               {lang === "EN"
                 ? "I personally review all messages and aim to respond within 2-3 business days. For urgent matters, please use the emergency contact number."
                 : "আমি ব্যক্তিগতভাবে সকল বার্তা পর্যালোচনা করি এবং ২-৩ কার্যদিবসের মধ্যে উত্তর দেওয়ার চেষ্টা করি। জরুরি বিষয়ের জন্য, অনুগ্রহ করে জরুরি যোগাযোগ নম্বর ব্যবহার করুন।"}
