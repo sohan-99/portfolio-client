@@ -118,17 +118,20 @@ export default function BnpNavbar() {
                   <div className="py-2">
                     {item.submenu.map((sub) => (
                       <MenuItem key={sub}>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            const urlPath = createUrlPath(sub);
-                            console.log("Navigating to:", urlPath);
-                            router.push(urlPath);
-                          }}
-                          className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden hover:bg-gray-100 transition-colors duration-200"
-                        >
-                          {sub}
-                        </button>
+                        {({ close }) => (
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              const urlPath = createUrlPath(sub);
+                              console.log("Navigating to:", urlPath);
+                              close(); // Close the dropdown
+                              router.push(urlPath);
+                            }}
+                            className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden hover:bg-gray-100 transition-colors duration-200"
+                          >
+                            {sub}
+                          </button>
+                        )}
                       </MenuItem>
                     ))}
                   </div>
