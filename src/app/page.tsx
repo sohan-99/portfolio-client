@@ -1,7 +1,6 @@
 "use client";
 import { FloatButton } from "antd";
 import { VerticalAlignTopOutlined } from "@ant-design/icons";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       {/* Content Container */}
       <div className="relative z-10">
         <Header />
-        <Footer />
       </div>
       <FloatButton
         icon={<VerticalAlignTopOutlined />}
