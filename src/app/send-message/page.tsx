@@ -1,6 +1,7 @@
 "use client";
 import { useLanguage } from "../components/LanguageContext";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function SendMessagePage() {
   const { lang } = useLanguage();
@@ -11,16 +12,90 @@ export default function SendMessagePage() {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert(
-      lang === "EN"
-        ? "Message sent successfully!"
-        : "বার্তা সফলভাবে পাঠানো হয়েছে!"
-    );
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      // EmailJS configuration from environment variables
+      const serviceID =
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_18qdp2a";
+      const templateID =
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_of9a68j";
+      const publicKey =
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "uRDyux5DnSX6eTb8d";
+
+      // Initialize EmailJS with public key
+      emailjs.init(publicKey);
+
+      // Prepare template parameters with all information combined in message
+      const fullMessage = `
+===== Contact Form Message =====
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || "Not provided"}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+
+===========================
+Sent from Portfolio Contact Form
+      `;
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: fullMessage,
+        to_name: "KM Mahbubar Rahman Harej",
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        serviceID,
+        templateID,
+        templateParams
+      );
+
+      if (response.status === 200) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            lang === "EN"
+              ? "Your message has been sent successfully! We'll get back to you soon."
+              : "আপনার বার্তা সফলভাবে পাঠানো হয়েছে! আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setSubmitStatus({
+        type: "error",
+        message:
+          lang === "EN"
+            ? "Failed to send your message. Please try again later."
+            : "আপনার বার্তা পাঠাতে ব্যর্থ হয়েছে। অনুগ্রহ করে পরে আবার চেষ্টা করুন।",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -201,11 +276,35 @@ export default function SendMessagePage() {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold py-4 px-8 rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                disabled={isSubmitting}
+                className={`font-bold py-4 px-8 rounded-lg transition-all duration-300 transform shadow-lg ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700 hover:scale-105"
+                }`}
               >
-                {lang === "EN" ? "Send Message" : "বার্তা পাঠান"}
+                {isSubmitting
+                  ? lang === "EN"
+                    ? "Sending..."
+                    : "পাঠানো হচ্ছে..."
+                  : lang === "EN"
+                  ? "Send Message"
+                  : "বার্তা পাঠান"}
               </button>
             </div>
+
+            {/* Status Message */}
+            {submitStatus.type && (
+              <div
+                className={`mt-6 p-4 rounded-lg text-center ${
+                  submitStatus.type === "success"
+                    ? "bg-green-100 text-green-800 border border-green-300"
+                    : "bg-red-100 text-red-800 border border-red-300"
+                }`}
+              >
+                <p className="font-medium">{submitStatus.message}</p>
+              </div>
+            )}
           </form>
 
           <div className="mt-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
