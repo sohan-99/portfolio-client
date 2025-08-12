@@ -29,7 +29,9 @@ export default function PlanningForBangladeshPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
                   <div className="text-center p-4 sm:p-6 bg-green-50 rounded-lg">
-                    <div className="text-3xl sm:text-4xl text-green-600 mb-3 sm:mb-4">🏛️</div>
+                    <div className="text-3xl sm:text-4xl text-green-600 mb-3 sm:mb-4">
+                      🏛️
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-green-800 mb-2 sm:mb-3">
                       Democratic Governance
                     </h3>
@@ -40,7 +42,9 @@ export default function PlanningForBangladeshPage() {
                   </div>
 
                   <div className="text-center p-4 sm:p-6 bg-blue-50 rounded-lg">
-                    <div className="text-3xl sm:text-4xl text-blue-600 mb-3 sm:mb-4">⚖️</div>
+                    <div className="text-3xl sm:text-4xl text-blue-600 mb-3 sm:mb-4">
+                      ⚖️
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-blue-800 mb-2 sm:mb-3">
                       Social Justice
                     </h3>
@@ -51,7 +55,9 @@ export default function PlanningForBangladeshPage() {
                   </div>
 
                   <div className="text-center p-4 sm:p-6 bg-orange-50 rounded-lg">
-                    <div className="text-3xl sm:text-4xl text-orange-600 mb-3 sm:mb-4">📈</div>
+                    <div className="text-3xl sm:text-4xl text-orange-600 mb-3 sm:mb-4">
+                      📈
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-orange-800 mb-2 sm:mb-3">
                       Economic Growth
                     </h3>
@@ -134,7 +140,9 @@ export default function PlanningForBangladeshPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
                   <div className="text-center p-4 sm:p-6 bg-green-50 rounded-lg">
-                    <div className="text-3xl sm:text-4xl text-green-600 mb-3 sm:mb-4">🏛️</div>
+                    <div className="text-3xl sm:text-4xl text-green-600 mb-3 sm:mb-4">
+                      🏛️
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-green-800 mb-2 sm:mb-3">
                       গণতান্ত্রিক শাসনব্যবস্থা
                     </h3>
@@ -145,7 +153,9 @@ export default function PlanningForBangladeshPage() {
                   </div>
 
                   <div className="text-center p-4 sm:p-6 bg-blue-50 rounded-lg">
-                    <div className="text-3xl sm:text-4xl text-blue-600 mb-3 sm:mb-4">⚖️</div>
+                    <div className="text-3xl sm:text-4xl text-blue-600 mb-3 sm:mb-4">
+                      ⚖️
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-blue-800 mb-2 sm:mb-3">
                       সামাজিক ন্যায়বিচার
                     </h3>
@@ -156,7 +166,9 @@ export default function PlanningForBangladeshPage() {
                   </div>
 
                   <div className="text-center p-4 sm:p-6 bg-orange-50 rounded-lg">
-                    <div className="text-3xl sm:text-4xl text-orange-600 mb-3 sm:mb-4">📈</div>
+                    <div className="text-3xl sm:text-4xl text-orange-600 mb-3 sm:mb-4">
+                      📈
+                    </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-orange-800 mb-2 sm:mb-3">
                       অর্থনৈতিক প্রবৃদ্ধি
                     </h3>

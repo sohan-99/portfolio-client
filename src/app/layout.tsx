@@ -31,7 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
         <meta name="theme-color" content="#00664E" />
       </head>
       <body
@@ -40,9 +43,7 @@ export default function RootLayout({
         <LanguageProvider>
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-grow">
-              {children}
-            </main>
+            <main className="flex-grow">{children}</main>
             <Footer />
             <ScrollToTopButton />
           </div>

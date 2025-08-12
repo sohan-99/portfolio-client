@@ -89,22 +89,20 @@ export default function Footer() {
               </p>
 
               {/* Social Media */}
-              <div className="flex justify-center sm:justify-start space-x-2 sm:space-x-3">
-                {socialIcons.map((social) => (
+              <div className="flex items-center space-x-2">
+                {socialIcons.map((s) => (
                   <a
-                    key={social.name}
-                    href={social.link}
-                    title={social.name}
-                    className="hover:scale-110 transition-transform rounded-full p-1.5 sm:p-2 hover:bg-green-700"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    key={s.name}
+                    href={s.link}
+                    title={s.name}
+                    className="hover:scale-110 transition-transform flex items-center"
                   >
                     <Image
-                      src={social.icon}
-                      alt={social.name}
-                      width={18}
-                      height={18}
-                      className="sm:w-5 sm:h-5 object-contain filter invert"
+                      src={s.icon}
+                      alt={s.name}
+                      width={34}
+                      height={34}
+                      className="object-contain"
                     />
                   </a>
                 ))}
